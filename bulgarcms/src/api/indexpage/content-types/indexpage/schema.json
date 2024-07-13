@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "indexpages",
+  "info": {
+    "singularName": "indexpage",
+    "pluralName": "indexpages",
+    "displayName": "indexpage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeaderTitle": {
+      "type": "string"
+    },
+    "FooterText": {
+      "type": "string"
+    },
+    "Cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

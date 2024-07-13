@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba Strapi</title>
+    <script>
+        async function fetchArticle() {
+            const response = await fetch('http://localhost:1337/api/trial');
+            const data = await response.json();
+            console.log(data); // Ver la estructura de los datos en la consola
+
+            // Acceso a los atributos del artículo
+            const article = data.data.attributes;
+
+            // Selecciona los elementos existentes
+            const titleElement = document.querySelector('h1');
+            const descElement = document.querySelector('p');
+
+            // Asigna el contenido
+            titleElement.textContent = article.Title;
+            descElement.textContent = article.Description;
+        }
+
+        window.onload = fetchArticle;
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <p></p>
+</body>
+</html>

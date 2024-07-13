@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "trials",
+  "info": {
+    "singularName": "trial",
+    "pluralName": "trials",
+    "displayName": "Trial",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
