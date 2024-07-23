@@ -377,6 +377,11 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
     HeaderTitle: Attribute.String;
     FooterText: Attribute.String;
     Cover: Attribute.Media<'images'>;
+    DescriptionText1: Attribute.Text;
+    DescriptionText2: Attribute.Text;
+    Servicios1: Attribute.String;
+    Servicios2: Attribute.String;
+    Servicios3: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

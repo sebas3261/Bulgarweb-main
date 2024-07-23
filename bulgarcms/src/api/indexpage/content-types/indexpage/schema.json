@@ -19,11 +19,27 @@
       "type": "string"
     },
     "Cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "DescriptionText1": {
+      "type": "text"
+    },
+    "DescriptionText2": {
+      "type": "text"
+    },
+    "Servicios1": {
+      "type": "string"
+    },
+    "Servicios2": {
+      "type": "string"
+    },
+    "Servicios3": {
+      "type": "string"
     }
   }
 }

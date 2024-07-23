@@ -424,7 +424,7 @@ nav h4 {
   transition: width 0.3s;
 }
 
-#page3-top #palabra:hover {
+#page3-top .palabra:hover {
   padding: 1.5vw;
   font-size: 2vw;
   font-weight: 300;
