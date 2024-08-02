@@ -367,16 +367,16 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
   info: {
     singularName: 'indexpage';
     pluralName: 'indexpages';
-    displayName: 'indexpage';
+    displayName: 'Index';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    HeaderTitle: Attribute.String;
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
     FooterText: Attribute.String;
-    Cover: Attribute.Media<'images'>;
+    Cover: Attribute.Media<'videos'>;
     DescriptionText1: Attribute.Text;
     DescriptionText2: Attribute.Text;
     Servicios1: Attribute.String;
@@ -397,6 +397,30 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
       'oneToOne',
       'admin::user'
     > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServServ extends Schema.SingleType {
+  collectionName: 'servs';
+  info: {
+    singularName: 'serv';
+    pluralName: 'servs';
+    displayName: 'Serv';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    FooterText: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::serv.serv', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::serv.serv', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -838,6 +862,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::indexpage.indexpage': ApiIndexpageIndexpage;
+      'api::serv.serv': ApiServServ;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

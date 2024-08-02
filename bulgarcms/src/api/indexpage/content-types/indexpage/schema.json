@@ -4,7 +4,7 @@
   "info": {
     "singularName": "indexpage",
     "pluralName": "indexpages",
-    "displayName": "indexpage",
+    "displayName": "Index",
     "description": ""
   },
   "options": {
@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "HeaderTitle": {
-      "type": "string"
+      "type": "string",
+      "default": "Bulgar"
     },
     "FooterText": {
       "type": "string"
@@ -23,7 +24,7 @@
       "multiple": false,
       "required": false,
       "allowedTypes": [
-        "images"
+        "videos"
       ]
     },
     "DescriptionText1": {
@@ -42,11 +43,12 @@
       "type": "string"
     },
     "Carousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
