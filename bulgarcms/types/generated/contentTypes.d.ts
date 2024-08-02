@@ -382,6 +382,7 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
     Servicios1: Attribute.String;
     Servicios2: Attribute.String;
     Servicios3: Attribute.String;
+    Carousel: Attribute.Media<'images', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -393,39 +394,6 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::indexpage.indexpage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiTrialTrial extends Schema.SingleType {
-  collectionName: 'trials';
-  info: {
-    singularName: 'trial';
-    pluralName: 'trials';
-    displayName: 'Trial';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    Title: Attribute.String;
-    Description: Attribute.Text;
-    Cover: Attribute.Media<'images'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::trial.trial',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::trial.trial',
       'oneToOne',
       'admin::user'
     > &
@@ -870,7 +838,6 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::indexpage.indexpage': ApiIndexpageIndexpage;
-      'api::trial.trial': ApiTrialTrial;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

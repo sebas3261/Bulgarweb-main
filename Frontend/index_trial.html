@@ -13,7 +13,7 @@
     <script>
         async function fetchAtt() {
             try {
-                const response = await fetch('http://localhost:1337/api/indexpage');
+                const response = await fetch('http://localhost:1337/api/indexpage?populate=*');
                 const data = await response.json();
                 console.log(data);
 
@@ -28,7 +28,8 @@
                 const servElement1 = document.getElementById("servicios1");
                 const servElement2 = document.getElementById("servicios2");
                 const servElement3 = document.getElementById("servicios3");
-                
+                const carouselImageElement1 = document.getElementById("carImg1");
+
 
                 // Asigna el contenido
 
@@ -53,6 +54,11 @@
                 servElement1.textContent = info.Servicios1;
                 servElement2.textContent = info.Servicios2;
                 servElement3.textContent = info.Servicios3;
+
+                // swiperImages
+                const imageUrl1 = info.Carousel.data[0].attributes.url;
+                carouselImageElement1.src = imageUrl1;
+                console.log(imageUrl1);
 
 
             } catch (error) {
@@ -164,8 +170,11 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="https://images.unsplash.com/photo-1682687979601-082a1295b78f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    alt="">
+                                <img
+                                    src=""
+                                    alt=""
+                                    id="carImg1"
+                                >
                                 <img src="https://images.unsplash.com/photo-1683009427470-a36fee396389?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="">
                                 <img src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D"

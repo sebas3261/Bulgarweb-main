@@ -40,6 +40,13 @@
     },
     "Servicios3": {
       "type": "string"
+    },
+    "Carousel": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
