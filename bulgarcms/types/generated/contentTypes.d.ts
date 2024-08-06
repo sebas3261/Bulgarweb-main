@@ -805,9 +805,6 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
     Cover: Attribute.Media<'videos'>;
     DescriptionText1: Attribute.Text;
     DescriptionText2: Attribute.Text;
-    Servicios1: Attribute.String;
-    Servicios2: Attribute.String;
-    Servicios3: Attribute.String;
     Carousel: Attribute.Media<'images', true>;
     videoShowcase: Attribute.Media<'videos', true>;
     ServiciosTitles: Attribute.Component<'index.servicios-titles', true>;

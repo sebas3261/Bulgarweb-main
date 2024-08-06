@@ -33,15 +33,6 @@
     "DescriptionText2": {
       "type": "text"
     },
-    "Servicios1": {
-      "type": "string"
-    },
-    "Servicios2": {
-      "type": "string"
-    },
-    "Servicios3": {
-      "type": "string"
-    },
     "Carousel": {
       "type": "media",
       "multiple": true,

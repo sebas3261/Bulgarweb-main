@@ -589,6 +589,35 @@ nav h4 {
 
 /* page3 */
 
+#page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 3vw;
+  margin-top: 3vw;
+}
+
+#page3-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: yellow;
+}
+
+#page3-top h2 {
+  margin-bottom: 2vw;
+  font-size: 4vw;
+  font-weight: 600;
+}
+
+#page3-elements {
+  height: 40vw;
+  width: 100%;
+  margin-top: 7vw;
+}
+
 /* footer*/
 
 footer {
@@ -749,217 +778,59 @@ footer .footer-bottom h1 .last {
 
 /* footer*/
 
-/*pagina 2 servicos*/
-
-.page_ser {
-  height: 140vh;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  padding: 5vw 2.8vw;
-}
-
-.page_ser_bottom_izquierda h1 {
-  padding: 5%;
-  font-style: normal;
-  width: 20%;
-}
-
-.page_ser_bottom_centro h2 {
-  padding-left: 25%;
-  padding-bottom: 2%;
-  font-weight: bold;
-}
-
-.page_ser_bottom_centro {
-  width: 40%;
-  position: absolute;
-  right: 40%;
-  top: 28%;
-}
-
-.page_ser_bottom_centro h3 {
-  padding-left: 25%;
-  padding-bottom: 10%;
-  font-weight: lighter;
-  text-align: justify;
-  text-align-last: justify;
-}
-
-.page_ser_bottom_derecha {
-  width: 20%;
-  position: absolute;
-  right: 10%;
-  top: 28%;
-}
-
-.page_ser_bottom_derecha h3 {
-  padding-left: 20%;
-  padding-bottom: 15%;
-  font-weight: lighter;
-  text-transform: capitalize;
-}
-
 /*pagina 3 Nosotros*/
 
 .container {
   height: 140vh;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  display: grid;
-
-  /* padding: 5vw 2.8vw; */
-
-  margin-bottom: 50px;
-}
-
-.container h2 {
-  text-align: center;
-}
-
-.container p {
-  text-align: justify;
-  font-size: 25px;
-}
-
-.box_valor {
-  position: absolute;
-  width: 30%;
-  height: 28%;
-  padding: 10px;
-
-  left: 65%;
-  top: 10%;
-}
-
-.box_comprension {
-  position: absolute;
-  width: 30%;
-  height: 15%;
-  padding: 10px;
-
-  right: 65%;
-  bottom: 10%;
-}
-
-.box_implementacion {
-  position: absolute;
-  width: 30%;
-  height: 15%;
-  padding: 10px;
-
-  right: 65%;
-  top: 10%;
-}
-
-.box_evaluacion {
-  position: absolute;
-  width: 30%;
-  height: 15%;
-  padding: 10px;
-
-  left: 65%;
-  bottom: 10%;
-}
-
-.BOX-CENT {
-  position: absolute;
-  text-align: center;
-  width: 40%;
-  height: 10%;
-  top: 60%;
-  left: 30%;
-}
-
-/* carrusel */
-
-input[type=radio] {
-  display: none;
-}
-
-.card {
-  position: absolute;
-  width: 60%;
-  height: 400px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  transition: transform .4s ease;
-  cursor: pointer;
-  background: rgb(233, 254, 0);
-  border-radius: 20px;
-  text-align: justify;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.card p {
   width: 80%;
-  font-size: medium;
-  margin-top: 3em;
-  font-family: nb;
-}
-
-.carousel {
-  width: 100%;
-  max-width: 800px;
-  height: 100%;
-  transform-style: preserve-3d;
+  background-color: white;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
   margin: auto;
 }
 
-.carousel h1 {
-  margin-bottom: 3em;
+.container-circle {
+  display: grid;
+  grid-template-areas:
+    "section1 circle section2"
+    "section3 circle section4";
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.cards {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  margin-bottom: 20px;
+.section {
+  padding: 20px;
 }
 
-#item-1:checked~.cards #val-4,
-#item-2:checked~.cards #val-1,
-#item-3:checked~.cards #val-2,
-#item-4:checked~.cards #val-3 {
-  transform: translatex(-60%) scale(.8);
-  opacity: .4;
-  z-index: 0;
+.section:nth-child(1) {
+  grid-area: section1;
 }
 
-#item-1:checked~.cards #val-3,
-#item-2:checked~.cards #val-4,
-#item-3:checked~.cards #val-1,
-#item-4:checked~.cards #val-2 {
-  transform: translatex(0) scale(1);
-  opacity: 1;
-  z-index: 1;
+.section:nth-child(2) {
+  grid-area: section2;
 }
 
-#item-1:checked~.cards #val-2,
-#item-2:checked~.cards #val-3,
-#item-3:checked~.cards #val-4,
-#item-4:checked~.cards #val-1 {
-  transform: translatex(60%) scale(.8);
-  opacity: .4;
-  z-index: 0;
+.section:nth-child(3) {
+  grid-area: section3;
 }
 
-#item-1:checked~.cards #val-1,
-#item-2:checked~.cards #val-2,
-#item-3:checked~.cards #val-3,
-#item-4:checked~.cards #val-4 {
-  transform: translatex(0) scale(.8);
-  opacity: .4;
-  z-index: 0;
+.section:nth-child(4) {
+  grid-area: section4;
 }
 
-/* carrusel */
+.circle {
+  grid-area: circle;
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
