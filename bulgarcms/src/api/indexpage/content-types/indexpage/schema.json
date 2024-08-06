@@ -51,11 +51,18 @@
       ]
     },
     "videoShowcase": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "ServiciosTitles": {
+      "displayName": "ServiciosTitles",
+      "type": "component",
+      "repeatable": true,
+      "component": "index.servicios-titles"
     }
   }
 }

@@ -810,6 +810,7 @@ export interface ApiIndexpageIndexpage extends Schema.SingleType {
     Servicios3: Attribute.String;
     Carousel: Attribute.Media<'images', true>;
     videoShowcase: Attribute.Media<'videos', true>;
+    ServiciosTitles: Attribute.Component<'index.servicios-titles', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -879,9 +880,6 @@ export interface ApiServiciosPagServiciosPag extends Schema.SingleType {
     Carousel: Attribute.Media<'images', true>;
     Cover: Attribute.Media<'videos' | 'images'>;
     Section: Attribute.Component<'servicios.section', true>;
-    Header: Attribute.String;
-    Description: Attribute.Text;
-    ServicesList: Attribute.Enumeration<['a']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

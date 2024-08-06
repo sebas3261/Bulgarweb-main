@@ -2,8 +2,19 @@
   "collectionName": "components_servicios_sections",
   "info": {
     "displayName": "Section",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
-  "attributes": {}
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "List": {
+      "type": "richtext"
+    }
+  }
 }

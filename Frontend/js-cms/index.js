@@ -12,9 +12,7 @@ async function fetchAtt() {
         const footerElement = document.getElementById("footerTitle");
         const descElement1 = document.getElementById("descriptionText1");
         const descElement2 = document.getElementById("descriptionText2");
-        const servElement1 = document.getElementById("servicios1");
-        const servElement2 = document.getElementById("servicios2");
-        const servElement3 = document.getElementById("servicios3");
+        const page3TopDiv = document.getElementById('page3-top');
         const carouselImageElement1 = document.getElementById("carImg1");
         const carouselImageElement2 = document.getElementById("carImg2");
         const carouselImageElement3 = document.getElementById("carImg3");
@@ -50,9 +48,21 @@ async function fetchAtt() {
         descElement2.textContent = info.DescriptionText2;
 
         // serviciosTexts
-        servElement1.textContent = info.Servicios1;
-        servElement2.textContent = info.Servicios2;
-        servElement3.textContent = info.Servicios3;
+        
+        info.ServiciosTitles.forEach((servicio, index) => {
+            const titleSpan = document.createElement('span');
+            titleSpan.className = 'palabra';
+            titleSpan.id = `servicios${index + 1}`;
+            titleSpan.textContent = servicio.Title;
+            page3TopDiv.appendChild(titleSpan);
+
+            // Crear separadores, excepto si es el último elemento
+            if (index < info.ServiciosTitles.length - 1) {
+                const separatorSpan = document.createElement('span');
+                separatorSpan.textContent = '/';
+                page3TopDiv.appendChild(separatorSpan);
+            }
+        });
 
         // videoElements
 

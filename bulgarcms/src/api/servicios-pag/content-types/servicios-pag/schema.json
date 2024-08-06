@@ -42,18 +42,6 @@
       "type": "component",
       "repeatable": true,
       "component": "servicios.section"
-    },
-    "Header": {
-      "type": "string"
-    },
-    "Description": {
-      "type": "text"
-    },
-    "ServicesList": {
-      "type": "enumeration",
-      "enum": [
-        "a"
-      ]
     }
   }
 }
