@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Bulgar</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
+
 <body>
     <div id="main">
         <div class="loader">
             <h2><span>Tomorrow's</span>
-            <span>Brands,</span>
-            <span>Today.™</span></h2>
+                <span>Brands,</span>
+                <span>Today.™</span>
+            </h2>
         </div>
         <div id="page1"> <!-- body -->
             <div class="menu">
                 <div class="menu-header">
-                   <h2><a href="index.html"><img src="img/preview.webp" alt=""></a></h2>
+                    <h2><a href="index.html"><img src="img/preview.webp" alt=""></a></h2>
                 </div>
 
                 <h2 id="close">Close</h2>
                 <div class="menu-sec">
                     <div class="vid">
                         <video muted autoplay loop src="video/video1.mp4"></video>
-                        
+
                     </div>
                     <div class="links">
                         <h3><a href="index.html">Inicio</a></h3>
@@ -41,85 +44,65 @@
                 <div class="small-links">
                     <h4>Tomorrow's Brands, Today.™</h4>
                     <div class="social">
-                        <h3>X <i class="ri-arrow-right-up-line"></i></h3> <h3>Instagram <i class="ri-arrow-right-up-line"></i></h3> <h3>LinkedIn <i class="ri-arrow-right-up-line"></i></h3> 
+                        <h3>X <i class="ri-arrow-right-up-line"></i></h3>
+                        <h3>Instagram <i class="ri-arrow-right-up-line"></i></h3>
+                        <h3>LinkedIn <i class="ri-arrow-right-up-line"></i></h3>
                     </div>
                 </div>
             </div>
             <div id="cursor">
-            <h5>Reel</h5>  
+                <h5>Reel</h5>
             </div>
-            <video autoplay loop muted src="video/video1.mp4"></video>
+            <video autoplay loop muted src="" id="coverVideo"></video>
             <div id="page1-content"> <!-- container -->
                 <nav>
                     <h2><a href="index.html">Bulgar.work</a></h2>
                     <h2 id="menu"><a href="#">Menu</a></h2>
                 </nav>
-                <h1>
-                    <span>B</span><span>u</span><span>l</span><span>g</span><span>a</span><span>r</span>
-                </h1> 
-                
+                <h1 id="headerTitle">
+                    <!-- CONTENIDO MANEJADO POR CMS -->
+                </h1>
+
             </div>
         </div>
-        <div id="page2">  
+        <div id="page2">
             <div id="page2-top">
                 <img src="img/preview.webp" alt="">
                 <h4>Info@bulgar.work</h4>
             </div>
             <div class="elem">
-                <h1>SOMOS UN ESTUDIO QUE GOZA DE AUTONOMIA PARA
-
-                    TRANSFORMAR LA COMUNICACION, RESIGNIFICANDO
-                    
-                    CONCEPTOS Y PERCEPCIONES, MIRANDO LO MUNDANO
-                    
-                    Y LO VULGAR CON OTRA OPTICA, RECORDANDO QUE
-                    
-                    LES HABLAMOS A PERSONAS, PERSONAS IMPERFECTAS,
-                    
-                    AUTENTICAS Y DULCEMENTE CORRIENTES...
-
-                    COMO NOSOSTROS.</h1>
+                <h1 id="descriptionText1"> <!-- CONTENIDO MANEJADO POR CMS --> </h1>
             </div>
         </div>
         <div id="page3">
             <div id="page3-top">
                 <h2>Servicios</h2>
-                <span id="palabra">Branding</span><span>/</span><span id="palabra">Marketing digital</span><span>/</span><span id="palabra">Marketing digital</span>
+                <span id="servicios1" class="palabra"><!-- CONTENIDO MANEJADO POR CMS --></span><span>/</span><span
+                    id="servicios2" class="palabra"><!-- CONTENIDO MANEJADO POR CMS --></span><span>/</span><span
+                    id="servicios3" class="palabra"><!-- CONTENIDO MANEJADO POR CMS --></span>
             </div>
             <div id="page3-elements">
                 <div class="box">
                     <img src="img/cubierta.webp" alt="">
-                    <video autoplay loop muted src="video/video2.mp4"></video>
+                    <video autoplay loop muted src="" id="videoEl1"><!-- CONTENIDO MANEJADO POR CMS --></video>
                 </div>
                 <div class="box">
                     <img src="img/cubierta.webp" alt="">
-                    <video autoplay loop muted src="video/video3.mp4"></video>
+                    <video autoplay loop muted src="" id="videoEl2"><!-- CONTENIDO MANEJADO POR CMS --></video>
                 </div>
                 <div class="box">
                     <img src="img/cubierta.webp" alt="">
-                    <video autoplay loop muted src="video/video4.mp4"></video>
+                    <video autoplay loop muted src="" id="videoEl3"><!-- CONTENIDO MANEJADO POR CMS --></video>
                 </div>
             </div>
         </div>
-        <div id="page3-2">  
+        <div id="page3-2">
             <div id="page3-2-top">
                 <h4>En que te podemos ayudar?</h4>
                 <h4>Info@bulgar.work</h4>
             </div>
             <div class="elem-1">
-                <h1>NOS ENFOCAMOS EN CONSTRUIR MARCAS. AYUDAMOS A
-
-                    LAS EMPRESAS A LANZARSE, CRECER Y OBTENER UNA
-                    
-                    VENTAJA COMPETITIVA EN EL MUNDO DIGITAL ACTUAL A
-                    
-                    TRAVÉS DE LA ESTRATEGIA, EL DISEÑO Y LA TECNOLOGÍA.
-
-                    NUESTRA MISIÓN ES CREAR EXPERIENCIAS DIGITALES
-                    
-                    NOTABLES QUE CONECTEN A LAS MARCAS CON SUS
-                    
-                    CLIENTES.</h1>
+                <h1 id="descriptionText2"><!-- CONTENIDO MANEJADO POR CMS --></h1>
             </div>
         </div>
         <div id="page4">
@@ -128,64 +111,88 @@
                 <div id="swiperdiv">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1682687979601-082a1295b78f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                            <img src="https://images.unsplash.com/photo-1683009427470-a36fee396389?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                            <img src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" alt="">
-                            <img src="https://images.unsplash.com/photo-1682687981922-7b55dbb30892?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="">
-                            <img src="https://images.unsplash.com/photo-1682687982107-14492010e05e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                          </div>
-                          <div class="swiper-slide">
-                            <img src="https://images.unsplash.com/photo-1682687979601-082a1295b78f?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                            <img src="https://images.unsplash.com/photo-1683009427470-a36fee396389?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                            <img src="https://images.unsplash.com/photo-1682687982502-1529b3b33f85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fHw%3D" alt="">
-                            <img src="https://images.unsplash.com/photo-1682687981922-7b55dbb30892?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEzfHx8ZW58MHx8fHx8" alt="">
-                            <img src="https://images.unsplash.com/photo-1682687982107-14492010e05e?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            <div class="swiper-slide">
+
+                                <!-- CONTENIDO MANEJADO POR CMS -->
+
+                                <img src="" alt="" id="carImg1">
+
+                                <img src="" alt="" id="carImg2">
+
+                                <img src="" alt="" id="carImg3">
+
+                                <img src="" alt="" id="carImg4">
+
+                                <img src="" alt="" id="carImg5">
+
+                                <!-- CONTENIDO MANEJADO POR CMS -->
+
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- CONTENIDO MANEJADO POR CMS -->
+
+                                <img src="" alt="" id="carImg6">
+
+                                <img src="" alt="" id="carImg7">
+
+                                <img src="" alt="" id="carImg8">
+
+                                <img src="" alt="" id="carImg9">
+
+                                <img src="" alt="" id="carImg10">
+
+                                <!-- CONTENIDO MANEJADO POR CMS -->
+                            </div>
                         </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-top">
-            <div class="first">
-                <div class="first-top">
-                    <h2>Hazlo bueno. hazlo con Bulgar</h2>
-                </div>
-            </div>
-            <div class="second">
-                <div class="second-one">
-                    <div class="span">
-                        <span>Home</span>
-                        <span>Work</span>
-                        <span>About</span>
-                        <span>Services & Models</span>
-                        <span>Contact</span>
-                    </div>
-                </div>
-                <div class="second-two">
-                    <div class="span">
-                        <span>X<i class="ri-arrow-right-up-line"></i></span>
-                        <span>Instagram<i class="ri-arrow-right-up-line"></i></span>
-                        <span>LinkedIn<i class="ri-arrow-right-up-line"></i></span>
-                    </div>
-                    <div class="span1">
-                        <span>info@bulgar.work</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <h1 class="animend">
-                <span class="last">B</span><span class="last">u</span><span class="last">l</span><span class="last">g</span><span class="last">a</span><span class="last">r</span>
-            </h1>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+        <footer>
+            <div class="footer-top">
+                <div class="first">
+                    <div class="first-top">
+                        <h2>Hazlo bueno. hazlo con Bulgar</h2>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="second-one">
+                        <div class="span">
+                            <span>Home</span>
+                            <span>Work</span>
+                            <span>About</span>
+                            <span>Services & Models</span>
+                            <span>Contact</span>
+                        </div>
+                    </div>
+                    <div class="second-two">
+                        <div class="span">
+                            <span>X<i class="ri-arrow-right-up-line"></i></span>
+                            <span>Instagram<i class="ri-arrow-right-up-line"></i></span>
+                            <span>LinkedIn<i class="ri-arrow-right-up-line"></i></span>
+                        </div>
+                        <div class="span1">
+                            <span>info@bulgar.work</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <h1 id="footerTitle" class="animend">
+                    <!-- CONTENIDO MANEJADO POR CMS -->
+                </h1>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js-cms/index.js"></script>
 </body>
+
 </html>

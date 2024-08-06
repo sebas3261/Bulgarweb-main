@@ -1,6 +1,6 @@
 async function fetchAtt() {
     try {
-        const response = await fetch('http://localhost:1337/api/indexpage?populate=*');
+        const response = await fetch('http://localhost:1337/api/servicios-pag?populate=*');
         const data = await response.json();
         console.log(data);
 
@@ -10,11 +10,6 @@ async function fetchAtt() {
         // Selecciona los elementos existentes
         const titleElement = document.getElementById("headerTitle");
         const footerElement = document.getElementById("footerTitle");
-        const descElement1 = document.getElementById("descriptionText1");
-        const descElement2 = document.getElementById("descriptionText2");
-        const servElement1 = document.getElementById("servicios1");
-        const servElement2 = document.getElementById("servicios2");
-        const servElement3 = document.getElementById("servicios3");
         const carouselImageElement1 = document.getElementById("carImg1");
         const carouselImageElement2 = document.getElementById("carImg2");
         const carouselImageElement3 = document.getElementById("carImg3");
@@ -26,9 +21,6 @@ async function fetchAtt() {
         const carouselImageElement9 = document.getElementById("carImg9");
         const carouselImageElement10 = document.getElementById("carImg10");
         const coverVideoElement = document.getElementById("coverVideo");
-        const videoElement1 = document.getElementById("videoEl1");
-        const videoElement2 = document.getElementById("videoEl2");
-        const videoElement3 = document.getElementById("videoEl3");
 
         // Asigna el contenido
 
@@ -44,29 +36,6 @@ async function fetchAtt() {
         const videoUrl = 'http://localhost:1337' + info.Cover.data.attributes.url;
         coverVideoElement.src = videoUrl;
         console.log(videoUrl);
-
-        // descriptionTexts
-        descElement1.textContent = info.DescriptionText1;
-        descElement2.textContent = info.DescriptionText2;
-
-        // serviciosTexts
-        servElement1.textContent = info.Servicios1;
-        servElement2.textContent = info.Servicios2;
-        servElement3.textContent = info.Servicios3;
-
-        // videoElements
-
-        const vidUrl1 = 'http://localhost:1337' + info.videoShowcase.data[0].attributes.url;
-        videoElement1.src = vidUrl1;
-        console.log(vidUrl1);
-
-        const vidUrl2 = 'http://localhost:1337' + info.videoShowcase.data[1].attributes.url;
-        videoElement2.src = vidUrl2;
-        console.log(vidUrl2);
-
-        const vidUrl3 = 'http://localhost:1337' + info.videoShowcase.data[2].attributes.url;
-        videoElement3.src = vidUrl3;
-        console.log(vidUrl3);
 
         // swiperImages
 

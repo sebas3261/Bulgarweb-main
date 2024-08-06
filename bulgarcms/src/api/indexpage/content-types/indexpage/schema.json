@@ -49,6 +49,13 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "videoShowcase": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

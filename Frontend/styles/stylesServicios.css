@@ -703,7 +703,7 @@ footer .footer-bottom h1 .last {
   padding: 5vw 2.8vw;
 }
 
-.page_ser_bottom_izquierda h1 {
+/* .page_ser_bottom_izquierda h1 {
   padding: 5%;
   font-style: normal;
   width: 20%;
@@ -742,4 +742,73 @@ footer .footer-bottom h1 .last {
   padding-bottom: 15%;
   font-weight: lighter;
   text-transform: capitalize;
+} */
+
+.container {
+  display: flex;
+  padding: 20px;
+}
+
+.column {
+  margin: 0 10px;
+}
+
+.title-column {
+  flex: 1;
+  display: flex;
+}
+
+.title-column h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.content-column {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.section-content {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.section-list {
+  flex: 3;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-content h2 {
+  font-size: 1.75em;  /* Ajuste del tamaño del h2 */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section-content p {
+  font-size: 1.125em;  /* Ajuste del tamaño del p */
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.5;  /* Ajuste del interlineado */
+}
+
+.section-list ul {
+  list-style-type: none;
+  font-size: 1.125em;  /* Ajuste del tamaño del p */
+  color: #666;
+  margin-bottom: 10px;
+  line-height: 1.5;  /* Ajuste del interlineado */
+}
+
+.section-list ul li {
+  font-size: 1em;
+  color: #333;
+  margin: 5px 0;
 }

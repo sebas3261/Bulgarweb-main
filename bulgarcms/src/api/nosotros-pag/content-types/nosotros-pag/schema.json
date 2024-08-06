@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "nosotros_pags",
+  "info": {
+    "singularName": "nosotros-pag",
+    "pluralName": "nosotros-pags",
+    "displayName": "NosotrosPag",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeaderTitle": {
+      "type": "string",
+      "default": "Bulgar"
+    },
+    "FooterText": {
+      "type": "string",
+      "default": "Bulgar"
+    },
+    "Carousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Cover": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

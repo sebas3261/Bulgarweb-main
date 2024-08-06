@@ -362,69 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiIndexpageIndexpage extends Schema.SingleType {
-  collectionName: 'indexpages';
-  info: {
-    singularName: 'indexpage';
-    pluralName: 'indexpages';
-    displayName: 'Index';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
-    FooterText: Attribute.String;
-    Cover: Attribute.Media<'videos'>;
-    DescriptionText1: Attribute.Text;
-    DescriptionText2: Attribute.Text;
-    Servicios1: Attribute.String;
-    Servicios2: Attribute.String;
-    Servicios3: Attribute.String;
-    Carousel: Attribute.Media<'images', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::indexpage.indexpage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::indexpage.indexpage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiServServ extends Schema.SingleType {
-  collectionName: 'servs';
-  info: {
-    singularName: 'serv';
-    pluralName: 'servs';
-    displayName: 'Serv';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
-    FooterText: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::serv.serv', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::serv.serv', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -653,6 +590,53 @@ export interface PluginContentReleasesReleaseAction
   };
 }
 
+export interface PluginI18NLocale extends Schema.CollectionType {
+  collectionName: 'i18n_locale';
+  info: {
+    singularName: 'locale';
+    pluralName: 'locales';
+    collectionName: 'locales';
+    displayName: 'Locale';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    'content-manager': {
+      visible: false;
+    };
+    'content-type-builder': {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
+    code: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'plugin::i18n.locale',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUsersPermissionsPermission
   extends Schema.CollectionType {
   collectionName: 'up_permissions';
@@ -804,46 +788,111 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface PluginI18NLocale extends Schema.CollectionType {
-  collectionName: 'i18n_locale';
+export interface ApiIndexpageIndexpage extends Schema.SingleType {
+  collectionName: 'indexpages';
   info: {
-    singularName: 'locale';
-    pluralName: 'locales';
-    collectionName: 'locales';
-    displayName: 'Locale';
+    singularName: 'indexpage';
+    pluralName: 'indexpages';
+    displayName: 'Index';
     description: '';
   };
   options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
+    draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 50;
-        },
-        number
-      >;
-    code: Attribute.String & Attribute.Unique;
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    FooterText: Attribute.String;
+    Cover: Attribute.Media<'videos'>;
+    DescriptionText1: Attribute.Text;
+    DescriptionText2: Attribute.Text;
+    Servicios1: Attribute.String;
+    Servicios2: Attribute.String;
+    Servicios3: Attribute.String;
+    Carousel: Attribute.Media<'images', true>;
+    videoShowcase: Attribute.Media<'videos', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'plugin::i18n.locale',
+      'api::indexpage.indexpage',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'plugin::i18n.locale',
+      'api::indexpage.indexpage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNosotrosPagNosotrosPag extends Schema.SingleType {
+  collectionName: 'nosotros_pags';
+  info: {
+    singularName: 'nosotros-pag';
+    pluralName: 'nosotros-pags';
+    displayName: 'NosotrosPag';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    FooterText: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    Carousel: Attribute.Media<'images', true>;
+    Cover: Attribute.Media<'videos'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::nosotros-pag.nosotros-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::nosotros-pag.nosotros-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiciosPagServiciosPag extends Schema.SingleType {
+  collectionName: 'servicios_pags';
+  info: {
+    singularName: 'servicios-pag';
+    pluralName: 'servicios-pags';
+    displayName: 'ServiciosPag';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    FooterText: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    Carousel: Attribute.Media<'images', true>;
+    Cover: Attribute.Media<'videos' | 'images'>;
+    Section: Attribute.Component<'servicios.section', true>;
+    Header: Attribute.String;
+    Description: Attribute.Text;
+    ServicesList: Attribute.Enumeration<['a']>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::servicios-pag.servicios-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::servicios-pag.servicios-pag',
       'oneToOne',
       'admin::user'
     > &
@@ -861,16 +910,17 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::indexpage.indexpage': ApiIndexpageIndexpage;
-      'api::serv.serv': ApiServServ;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
+      'plugin::i18n.locale': PluginI18NLocale;
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'plugin::i18n.locale': PluginI18NLocale;
+      'api::indexpage.indexpage': ApiIndexpageIndexpage;
+      'api::nosotros-pag.nosotros-pag': ApiNosotrosPagNosotrosPag;
+      'api::servicios-pag.servicios-pag': ApiServiciosPagServiciosPag;
     }
   }
 }
