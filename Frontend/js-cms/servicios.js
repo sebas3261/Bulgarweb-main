@@ -10,6 +10,7 @@ async function fetchAtt() {
         // Selecciona los elementos existentes
         const titleElement = document.getElementById("headerTitle");
         const footerElement = document.getElementById("footerTitle");
+        const sectionsContainer = document.getElementById('sections-container');
         const carouselImageElement1 = document.getElementById("carImg1");
         const carouselImageElement2 = document.getElementById("carImg2");
         const carouselImageElement3 = document.getElementById("carImg3");
@@ -36,6 +37,35 @@ async function fetchAtt() {
         const videoUrl = 'http://localhost:1337' + info.Cover.data.attributes.url;
         coverVideoElement.src = videoUrl;
         console.log(videoUrl);
+
+        // Secciones servicios
+
+        info.Section.forEach(section => {
+
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'section';
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'section-content';
+            contentDiv.innerHTML = `<h2>${section.Header}</h2><p>${section.Description}</p>`;
+
+            const listDiv = document.createElement('div');
+            listDiv.className = 'section-list';
+            const ul = document.createElement('ul');
+
+            section.List.split('\n').forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                ul.appendChild(li);
+            });
+
+            listDiv.appendChild(ul);
+
+            sectionDiv.appendChild(contentDiv);
+            sectionDiv.appendChild(listDiv);
+
+            sectionsContainer.appendChild(sectionDiv);
+        });
 
         // swiperImages
 
