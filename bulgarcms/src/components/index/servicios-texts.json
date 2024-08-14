@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_index_servicios_texts",
+  "info": {
+    "displayName": "ServiciosTitles",
+    "icon": "chartBubble",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

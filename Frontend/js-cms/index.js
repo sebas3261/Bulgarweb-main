@@ -48,7 +48,7 @@ async function fetchAtt() {
         descElement2.textContent = info.DescriptionText2;
 
         // serviciosTexts
-        
+
         info.ServiciosTitles.forEach((servicio, index) => {
             const titleSpan = document.createElement('span');
             titleSpan.className = 'palabra';

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "indexpage",
     "pluralName": "indexpages",
-    "displayName": "Index",
+    "displayName": "indexpage",
     "description": ""
   },
   "options": {
@@ -14,10 +14,8 @@
   "attributes": {
     "HeaderTitle": {
       "type": "string",
-      "default": "Bulgar"
-    },
-    "FooterText": {
-      "type": "string"
+      "default": "Bulgar",
+      "required": false
     },
     "Cover": {
       "type": "media",
@@ -33,13 +31,11 @@
     "DescriptionText2": {
       "type": "text"
     },
-    "Carousel": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "ServiciosTitles": {
+      "displayName": "serviciosTexts",
+      "type": "component",
+      "repeatable": true,
+      "component": "index.servicios-texts"
     },
     "videoShowcase": {
       "type": "media",
@@ -49,11 +45,16 @@
         "videos"
       ]
     },
-    "ServiciosTitles": {
-      "displayName": "ServiciosTitles",
-      "type": "component",
-      "repeatable": true,
-      "component": "index.servicios-titles"
+    "Carousel": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "FooterText": {
+      "type": "string"
     }
   }
 }
