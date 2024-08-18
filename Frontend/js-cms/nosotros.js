@@ -21,6 +21,8 @@ async function fetchAtt() {
         const carouselImageElement9 = document.getElementById("carImg9");
         const carouselImageElement10 = document.getElementById("carImg10");
         const coverVideoElement = document.getElementById("coverVideo");
+        const sectionsContainer = document.getElementById("sectionsContainer");
+        const circle = document.getElementById("circle");
 
         // Asigna el contenido
 
@@ -36,6 +38,27 @@ async function fetchAtt() {
         const videoUrl = 'http://localhost:1337' + info.Cover.data.attributes.url;
         coverVideoElement.src = videoUrl;
         console.log(videoUrl);
+
+        // Sections
+
+        info.Sections.forEach(section => {
+            const sectionDiv = document.createElement('div');
+            sectionDiv.className = 'section';
+
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = section.Title;
+            sectionDiv.appendChild(titleElement);
+
+            const descriptionElement = document.createElement('p');
+            descriptionElement.textContent = section.Description;
+            sectionDiv.appendChild(descriptionElement);
+
+            sectionsContainer.appendChild(sectionDiv);
+        });
+
+        // Circle Title
+
+        circle.textContent = info.CircleTitle;
 
         // swiperImages
 

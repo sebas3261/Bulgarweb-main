@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_servicios_sections",
+  "info": {
+    "displayName": "Section",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "Header": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "List": {
+      "type": "text"
+    }
+  }
+}

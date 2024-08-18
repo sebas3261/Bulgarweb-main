@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_contacto_sections",
+  "info": {
+    "displayName": "Sections",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

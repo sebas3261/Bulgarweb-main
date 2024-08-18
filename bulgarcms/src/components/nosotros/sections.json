@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_nosotros_sections",
+  "info": {
+    "displayName": "Sections",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

@@ -442,6 +442,7 @@ nav h4 {
 #page3-top {
   text-align: center;
   padding-bottom: 10vw;
+  box-sizing: inherit;
 }
 
 #page3-top h2 {

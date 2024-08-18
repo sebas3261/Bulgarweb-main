@@ -362,44 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiIndexpageIndexpage extends Schema.SingleType {
-  collectionName: 'indexpages';
-  info: {
-    singularName: 'indexpage';
-    pluralName: 'indexpages';
-    displayName: 'indexpage';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
-    Cover: Attribute.Media<'videos'>;
-    DescriptionText1: Attribute.Text;
-    DescriptionText2: Attribute.Text;
-    ServiciosTitles: Attribute.Component<'index.servicios-texts', true>;
-    videoShowcase: Attribute.Media<'videos', true>;
-    Carousel: Attribute.Media<'images', true>;
-    FooterText: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::indexpage.indexpage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::indexpage.indexpage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -826,6 +788,148 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactoPagContactoPag extends Schema.SingleType {
+  collectionName: 'contacto_pags';
+  info: {
+    singularName: 'contacto-pag';
+    pluralName: 'contacto-pags';
+    displayName: 'ContactoPag';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeaderTitle: Attribute.String;
+    DescriptionText: Attribute.Text;
+    FooterText: Attribute.String;
+    Sections: Attribute.Component<'contacto.sections', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contacto-pag.contacto-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contacto-pag.contacto-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiIndexpageIndexpage extends Schema.SingleType {
+  collectionName: 'indexpages';
+  info: {
+    singularName: 'indexpage';
+    pluralName: 'indexpages';
+    displayName: 'indexpage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    Cover: Attribute.Media<'videos'>;
+    DescriptionText1: Attribute.Text;
+    DescriptionText2: Attribute.Text;
+    ServiciosTitles: Attribute.Component<'index.servicios-texts', true>;
+    videoShowcase: Attribute.Media<'videos', true>;
+    Carousel: Attribute.Media<'images', true>;
+    FooterText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::indexpage.indexpage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::indexpage.indexpage',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiNosotrosPagNosotrosPag extends Schema.SingleType {
+  collectionName: 'nosotros_pags';
+  info: {
+    singularName: 'nosotros-pag';
+    pluralName: 'nosotros-pags';
+    displayName: 'NosotrosPag';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeaderTitle: Attribute.String;
+    Cover: Attribute.Media<'images' | 'videos'>;
+    Sections: Attribute.Component<'nosotros.sections', true>;
+    Carousel: Attribute.Media<'videos' | 'images', true>;
+    FooterText: Attribute.String;
+    CircleTitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::nosotros-pag.nosotros-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::nosotros-pag.nosotros-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiciosPagServiciosPag extends Schema.SingleType {
+  collectionName: 'servicios_pags';
+  info: {
+    singularName: 'servicios-pag';
+    pluralName: 'servicios-pags';
+    displayName: 'ServiciosPag';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeaderTitle: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    Cover: Attribute.Media<'images' | 'videos'>;
+    Section: Attribute.Component<'servicios.section', true>;
+    Carousel: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    FooterText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::servicios-pag.servicios-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::servicios-pag.servicios-pag',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -836,7 +940,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::indexpage.indexpage': ApiIndexpageIndexpage;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -845,6 +948,10 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::contacto-pag.contacto-pag': ApiContactoPagContactoPag;
+      'api::indexpage.indexpage': ApiIndexpageIndexpage;
+      'api::nosotros-pag.nosotros-pag': ApiNosotrosPagNosotrosPag;
+      'api::servicios-pag.servicios-pag': ApiServiciosPagServiciosPag;
     }
   }
 }

@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "servicios_pags",
+  "info": {
+    "singularName": "servicios-pag",
+    "pluralName": "servicios-pags",
+    "displayName": "ServiciosPag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeaderTitle": {
+      "type": "string",
+      "default": "Bulgar"
+    },
+    "Cover": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Section": {
+      "displayName": "Section",
+      "type": "component",
+      "repeatable": true,
+      "component": "servicios.section"
+    },
+    "Carousel": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "FooterText": {
+      "type": "string"
+    }
+  }
+}
