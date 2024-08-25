@@ -804,6 +804,7 @@ export interface ApiContactoPagContactoPag extends Schema.SingleType {
     DescriptionText: Attribute.Text;
     FooterText: Attribute.String;
     Sections: Attribute.Component<'contacto.sections', true>;
+    Cover: Attribute.Media<'images' | 'videos'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

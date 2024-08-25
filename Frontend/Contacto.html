@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/stylesContacto2.css">
+    <link rel="stylesheet" href="styles/stylesContactoResponsive.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
@@ -18,9 +18,9 @@
             <div class="menu">
                 <div class="menu-header">
                     <h2><a href="index.html"><img src="img/preview.webp" alt=""></a></h2>
+                    <h2 id="close"><span>Close</span></h2>
                 </div>
 
-                <h2 id="close">Close</h2>
                 <div class="menu-sec">
                     <div class="vid">
                         <video muted autoplay loop src="video/video1.mp4"></video>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="menu-border"></div>
                 <div class="small-links">
-                    <h4>Tomorrow's Brands, Today.™</h4>
+                    <h4 class="title-small-links">Tomorrow's Brands, Today.™</h4>
                     <div class="social">
                         <h3>X <i class="ri-arrow-right-up-line"></i></h3>
                         <h3>Instagram <i class="ri-arrow-right-up-line"></i></h3>
@@ -47,14 +47,16 @@
             <div id="cursor">
                 <h5>Reel</h5>
             </div>
-            <video autoplay loop muted src="video/video1.mp4"></video>
+            <video autoplay loop muted src="" id="coverVideo"></video>
             <div id="page1-content"> <!-- container -->
                 <nav>
                     <h2><a href="index.html">Bulgar.work</a></h2>
-                    <h2 id="menu"><a href="#">Menu</a></h2>
+                    <div class="button-menu">
+                        <h2 id="menu"><a href="#">Menu</a></h2>
+                    </div>
                 </nav>
-                <h1>
-                    <span>B</span><span>u</span><span>l</span><span>g</span><span>a</span><span>r</span>
+                <h1 id="headerTitle">
+                    <!-- CONTENIDO MANEJADO POR CMS -->
                 </h1>
 
             </div>
@@ -69,6 +71,8 @@
                 <div id="contact-desc" class="contact-desc">
                     <h2 id="contact-desc-h2"> <!-- CONTENIDO MANEJADO POR CMS --> </h2>
                 </div>
+
+                <div class="menu-border"></div>
 
                 <div id="contact-info" class="contact-info">
 
