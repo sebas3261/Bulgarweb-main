@@ -12,7 +12,7 @@
 
   /* Cursor */
   #cursor {
-    display: none;
+    display: none !important;
   }
 
   /* Menu */
@@ -36,11 +36,6 @@
   .menu-sec .links a {
     font-size: 60px;
   }
-
-  /* .menu-sec .links button {
-    padding: 10px 20px;
-    font-size: 16px;
-  } */
 
   .menu .menu-border {
     display: none;
@@ -108,10 +103,6 @@
     font-size: 14px;
   }
 
-  #page1-content h2 {
-    font-size: 28px;
-  }
-
   .button-menu {
     border: 2px solid white;
     width: 80px;
@@ -122,12 +113,13 @@
 
   }
 
+
   #page1-content button {
     font-size: 14px;
     padding: 10px 20px;
   }
 
-  /* Pagina 2 */
+  /* Pagina 1 */
 
   /* page2 */
 
