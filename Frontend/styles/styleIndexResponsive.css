@@ -767,6 +767,9 @@ footer .footer-bottom h1 .last {
     font-size: 14px;
   }
 
+  #cursor{
+    display: none;
+  }
   /* Loader */
   .loader h2 span {
     font-size: 26px;
@@ -1197,7 +1200,7 @@ footer .footer-bottom h1 .last {
 
   /* Cursor */
   #cursor {
-    display: none !important;
+    display: none;
   }
 
   /* Menu */
