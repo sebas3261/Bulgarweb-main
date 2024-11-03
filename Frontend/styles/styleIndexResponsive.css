@@ -1,11 +1,11 @@
 @font-face {
   font-family: nb;
-  src: url(/fuente/NBInternationalProBoo.ttf);
+  src: url(../fuente/NBInternationalProBoo.ttf);
 }
 
 @font-face {
   font-family: rh;
-  src: url(/fuente/Rejouice-Headline.ttf);
+  src: url(../fuente/Rejouice-Headline.ttf);
 }
 
 * {
@@ -767,6 +767,19 @@ footer .footer-bottom h1 .last {
     font-size: 14px;
   }
 
+  .slidepage3{
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+  }
+
+  .slidepage3::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Edge */
+  }
+
+  #cursor{
+    display: none;
+  }
   /* Loader */
   .loader h2 span {
     font-size: 26px;
@@ -1197,9 +1210,12 @@ footer .footer-bottom h1 .last {
 
   /* Cursor */
   #cursor {
-    display: none !important;
+    display: none;
   }
 
+  .menu .menu-border {
+    height: 0px;
+}
   /* Menu */
 
   .menu-header {
@@ -1240,7 +1256,15 @@ footer .footer-bottom h1 .last {
     margin: 0;
     padding: 5px 0;
   }
+  .slidepage3{
+    overflow-x: auto;
+    scrollbar-width: none;
+    justify-content: center;
+  }
 
+  .slidepage3::-webkit-scrollbar {
+    display: none; /* Chrome, Safari y Edge */
+  }
 
   /* Pagina 1 */
 
@@ -1321,6 +1345,8 @@ footer .footer-bottom h1 .last {
   #page3 {
     height: fit-content;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 
   #page3 #page3-top h2 {
@@ -1328,7 +1354,6 @@ footer .footer-bottom h1 .last {
   }
 
   #page3 #page3-top span {
-    font-size: 5vw;
     overflow-wrap: break-word;
   }
 
@@ -1370,6 +1395,11 @@ footer .footer-bottom h1 .last {
 
   #page3-elements .box:hover img {
     opacity: 0;
+  }
+
+  #page3-top{
+    margin: 20px;
+    font-size: 18px;
   }
 
   #page3-2 #page3-2-top h4 {

@@ -1,11 +1,11 @@
 @font-face {
   font-family: nb;
-  src: url(fuente/NBInternationalProBoo.ttf);
+  src: url(../fuente/NBInternationalProBoo.ttf);
 }
 
 @font-face {
   font-family: rh;
-  src: url(fuente/Rejouice-Headline.ttf);
+  src: url(../fuente/Rejouice-Headline.ttf);
 }
 :root {
   --max-width: 1440px;
@@ -16,8 +16,8 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: rh;
+  -webkit-font-smoothing: antialiased; 
   font-weight: 400;
 }
 
