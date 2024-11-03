@@ -843,11 +843,31 @@ footer .footer-bottom h1 .last {
   overflow: hidden;
 }
 
+.provimg{
+  max-height: 100%;
+  max-width: auto;
+  object-fit: cover;
+}
+
+#page3-elements{
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 576px) {
 
   /* Ajustes generales */
-  body {
-    font-size: 14px;
+
+  .container-circle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circle{
+    background-color: #FFF;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    height: fit-content;
   }
 
   /* Loader */
@@ -967,7 +987,7 @@ footer .footer-bottom h1 .last {
   /* Pagina 2 */
 
   #page2 {
-    height: fit-content;
+    height: 100hv;
     box-sizing: border-box;
   }
 
@@ -1268,9 +1288,6 @@ footer .footer-bottom h1 .last {
 @media screen and (min-width: 577px) and (max-width: 1024px) {
 
   /* Ajustes generales */
-  body {
-    font-size: 14px;
-  }
 
   /* Loader */
   .loader h2 span {
@@ -1323,6 +1340,9 @@ footer .footer-bottom h1 .last {
     padding: 5px 0;
   }
 
+  .menu .menu-border {
+    height: 0px;
+}
 
   /* Pagina 1 */
 
@@ -1349,6 +1369,18 @@ footer .footer-bottom h1 .last {
     content: "X";
     font-size: 10px;
     display: block;
+  }
+
+  .container-circle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circle{
+    background-color: #FFF;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    height: fit-content;
   }
 
   #close span {
@@ -1383,7 +1415,7 @@ footer .footer-bottom h1 .last {
   /* Pagina 2 */
 
   #page2 {
-    height: fit-content;
+    height: 100hv;
     box-sizing: border-box;
   }
 
