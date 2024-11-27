@@ -13,18 +13,6 @@ export interface ServiciosSection extends Schema.Component {
   };
 }
 
-export interface NosotrosSections extends Schema.Component {
-  collectionName: 'components_nosotros_sections';
-  info: {
-    displayName: 'Sections';
-    icon: 'archive';
-  };
-  attributes: {
-    Title: Attribute.String;
-    Description: Attribute.Text;
-  };
-}
-
 export interface IndexServiciosTexts extends Schema.Component {
   collectionName: 'components_index_servicios_texts';
   info: {
@@ -50,13 +38,25 @@ export interface ContactoSections extends Schema.Component {
   };
 }
 
+export interface NosotrosSections extends Schema.Component {
+  collectionName: 'components_nosotros_sections';
+  info: {
+    displayName: 'Sections';
+    icon: 'archive';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.Text;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'servicios.section': ServiciosSection;
-      'nosotros.sections': NosotrosSections;
       'index.servicios-texts': IndexServiciosTexts;
       'contacto.sections': ContactoSections;
+      'nosotros.sections': NosotrosSections;
     }
   }
 }

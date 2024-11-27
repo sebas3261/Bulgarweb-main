@@ -23,6 +23,7 @@ async function fetchAtt() {
         const coverVideoElement = document.getElementById("coverVideo");
         const sectionsContainer = document.getElementById("sectionsContainer");
         const circle = document.getElementById("circle");
+        const fullImage = document.getElementById("fullImage");
 
         // Asigna el contenido
 
@@ -59,6 +60,12 @@ async function fetchAtt() {
         // Circle Title
 
         circle.textContent = info.CircleTitle;
+
+        // Full Image
+
+        const fullImageUrl = 'http://localhost:1337' + info.FullImage.data.attributes.url;
+        fullImage.src = fullImageUrl;
+        console.log(fullImageUrl);
 
         // swiperImages
 

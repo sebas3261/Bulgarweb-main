@@ -879,6 +879,7 @@ export interface ApiNosotrosPagNosotrosPag extends Schema.SingleType {
     Carousel: Attribute.Media<'videos' | 'images', true>;
     FooterText: Attribute.String;
     CircleTitle: Attribute.String;
+    FullImage: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

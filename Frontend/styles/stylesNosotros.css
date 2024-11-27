@@ -260,9 +260,6 @@ body {
   transform-origin: bottom left;
 }
 
-#page2{
-  overflow: hidden;
-}
 .menu-sec .links button {
   background-color: transparent;
   border: 1px solid #000;
@@ -400,6 +397,7 @@ nav h4 {
   height: 100vh;
   padding: 5vw 2.8vw;
   display: flex;
+  flex-direction: column;
   align-items: center ;
 }
 
@@ -410,6 +408,7 @@ nav h4 {
   padding-bottom: 1.2vw;
   margin-bottom: 1vw;
   border-bottom: 1px solid black;
+  width: 100%;
 }
 
 #page2-top img {
@@ -621,7 +620,79 @@ nav h4 {
 #page3-elements {
   height: 40vw;
   width: 100%;
-  margin-top: 7vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+/*pagina 3 Nosotros*/
+
+.container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.container-circle {
+  display: grid;
+  grid-template-areas:
+    "section1 circle section2"
+    "section3 circle section4";
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.section:nth-child(1) {
+  grid-area: section1;
+}
+
+.section:nth-child(2) {
+  grid-area: section2;
+}
+
+.section:nth-child(3) {
+  grid-area: section3;
+}
+
+.section:nth-child(4) {
+  grid-area: section4;
+}
+
+.circle {
+  grid-area: circle;
+  width: 400px;
+  height: 400px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#page4 {
+  overflow: hidden;
+}
+
+.provimg{
+  max-height: 100%;
+  max-width: auto;
+  object-fit: cover;
+}
+
+#page3-elements{
+  align-items: center;
+  justify-content: center;
 }
 
 /* footer*/
@@ -783,77 +854,6 @@ footer .footer-bottom h1 .last {
 
 /* footer*/
 
-/*pagina 3 Nosotros*/
-
-.container {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-}
-
-.container-circle {
-  display: grid;
-  grid-template-areas:
-    "section1 circle section2"
-    "section3 circle section4";
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: auto auto;
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.section {
-  padding: 20px;
-}
-
-.section:nth-child(1) {
-  grid-area: section1;
-}
-
-.section:nth-child(2) {
-  grid-area: section2;
-}
-
-.section:nth-child(3) {
-  grid-area: section3;
-}
-
-.section:nth-child(4) {
-  grid-area: section4;
-}
-
-.circle {
-  grid-area: circle;
-  width: 400px;
-  height: 400px;
-  background-color: yellow;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#page4 {
-  overflow: hidden;
-}
-
-.provimg{
-  max-height: 100%;
-  max-width: auto;
-  object-fit: cover;
-}
-
-#page3-elements{
-  align-items: center;
-  justify-content: center;
-}
-
 @media screen and (max-width: 576px) {
 
   /* Ajustes generales */
@@ -987,8 +987,10 @@ footer .footer-bottom h1 .last {
   /* Pagina 2 */
 
   #page2 {
-    height: 100hv;
+    height: fit-content;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
   }
 
   #page2 #page2-top h4 {
