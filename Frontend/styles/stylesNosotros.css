@@ -479,72 +479,6 @@ nav h4 {
   margin-top: 7vw;
 }
 
-#page3-elements .box {
-  height: 100%;
-  width: 32.5%;
-  /* background-color: blue; */
-  position: relative;
-}
-
-#page3-elements .box video {
-  height: 100%;
-  width: 100%;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-#page3-elements .box img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-
-  object-fit: cover;
-  object-position: center;
-  transition: all ease 1s;
-}
-
-#page3-elements .box:hover img {
-  opacity: 0;
-}
-
-#page3-2 {
-  height: 100vh;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  padding: 5vw 2.8vw;
-}
-
-#page3-2-top {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 1.2vw;
-  margin-bottom: 1vw;
-  border-bottom: 1px solid black;
-}
-
-#page3-2-top img {
-  font-size: 1.7vw;
-  font-weight: 500;
-  width: 5%;
-}
-
-#page3-2-top h4 {
-  font-size: 1.7vw;
-  font-weight: 500;
-}
-
-.elem-1 {
-  overflow: hidden;
-}
-
-.elem-1 h1 {
-  font-size: 3.2vw;
-  font-weight: 500;
-}
-
 /* page3 */
 
 #page4 {
@@ -1022,8 +956,8 @@ footer .footer-bottom h1 .last {
   }
 
   #page3-elements {
-    height: 50rem !important;
-    width: 150%;
+    height: fit-content;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1031,47 +965,11 @@ footer .footer-bottom h1 .last {
     margin-top: 7vw;
   }
 
-  #page3-elements .box {
-    height: 400px;
-    width: 400px;
-    /* background-color: blue; */
-    position: relative;
+  #page3-elements #provimg {
+    display: none !important;
   }
 
-  #page3-elements .box video {
-    height: 100%;
-    width: 100%;
-
-    object-fit: cover;
-    object-position: center;
-  }
-
-  #page3-elements .box img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
-    object-fit: cover;
-    object-position: center;
-    transition: all ease 1s;
-  }
-
-  #page3-elements .box:hover img {
-    opacity: 0;
-  }
-
-  #page3-2 #page3-2-top h4 {
-    font-size: 16px;
-  }
-
-  #page3-2 .elem-1 h1#descriptionText2 {
-    padding-top: 5vw;
-    line-height: 1.8;
-    letter-spacing: 5px;
-    font-size: 5vw;
-    font-weight: 500;
-    overflow: visible;
-  }
+  
 
   #page4 {
     height: 80vh !important;
