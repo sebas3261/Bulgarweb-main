@@ -84,7 +84,7 @@ body {
 .menu.active {
   position: absolute;
   z-index: 6;
-  height: 60vh;
+  height: fit-content;
   width: 100vw;
   background-color: #ff5f38;
 }
@@ -490,7 +490,6 @@ nav h4 {
   margin: 5px 0;
 }
 
-
 /* page2 */
 
 /* page3 */
@@ -738,8 +737,8 @@ footer .footer-top {
   cursor: pointer;
 }
 
-.second .second-one .span>span::after,
-.second .second-one .span1>span::after {
+.second .second-one .span > span::after,
+.second .second-one .span1 > span::after {
   content: "";
   position: absolute;
   height: 1px;
@@ -752,8 +751,8 @@ footer .footer-top {
   transition: transform 0.35s ease-out;
 }
 
-.second .second-one .span>span:hover::after,
-.second .second-one .span1>span:hover::after {
+.second .second-one .span > span:hover::after,
+.second .second-one .span1 > span:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -771,8 +770,8 @@ footer .footer-top {
   cursor: pointer;
 }
 
-.second .second-two .span>span::after,
-.second .second-two .span1>span::after {
+.second .second-two .span > span::after,
+.second .second-two .span1 > span::after {
   content: "";
   position: absolute;
   height: 1px;
@@ -785,8 +784,8 @@ footer .footer-top {
   transition: transform 0.35s ease-out;
 }
 
-.second .second-two .span>span:hover::after,
-.second .second-two .span1>span:hover::after {
+.second .second-two .span > span:hover::after,
+.second .second-two .span1 > span:hover::after {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
@@ -821,7 +820,6 @@ footer .footer-bottom h1 .last {
 /* footer*/
 
 @media screen and (max-width: 576px) {
-
   /* Ajustes generales */
 
   /* Loader */
@@ -882,7 +880,6 @@ footer .footer-bottom h1 .last {
     padding: 5px 0;
   }
 
-
   /* Pagina 1 */
 
   #page1-content nav h2 a {
@@ -929,9 +926,7 @@ footer .footer-bottom h1 .last {
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
-
 
   #page1-content button {
     font-size: 14px;
@@ -940,111 +935,93 @@ footer .footer-bottom h1 .last {
 
   /* page2 */
 
-#page2 {
-  min-height: 100vh;
-  width: 100%;
-  background-color: white;
-  position: relative;
-  padding: 5vw 2.8vw;
-}
+  #page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    padding: 5vw 2.8vw;
+  }
 
-#page2-top {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding-bottom: 1.2vw;
-  margin-bottom: 1vw;
-  border-bottom: 1px solid black;
-}
+  #page2 #page2-top h4 {
+    font-size: 16px;
+  }
 
-#page2-top img {
-  font-size: 1.7vw;
-  font-weight: 500;
-  width: 5%;
-}
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+  }
 
-#page2-top h4 {
-  font-size: 1.7vw;
-  font-weight: 500;
-}
+  .column {
+    margin: 0 10px;
+  }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  overflow: hidden;
-}
+  .title-column {
+    flex: 1;
+    display: flex;
+  }
 
-.column {
-  margin: 0 10px;
-}
+  .title-column h1 {
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 20px;
+  }
 
-.title-column {
-  flex: 1;
-  display: flex;
-}
+  /* .content-column {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+  } */
 
-.title-column h1 {
-  font-size: 2.5em;
-  text-align: center;
-  padding-bottom: 20px;
-}
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
 
-.content-column {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-}
+  .section-content {
+    margin: 0;
+  }
 
-.section {
-  display: flex;
-  margin-bottom: 20px;
-}
+  .section-list {
+    padding-left: 0;
+  }
 
-.section-content {
-  flex: 2;
-  margin: 0 10px;
-}
+  .section-content h2 {
+    font-size: 1.75em;
+    /* Ajuste del tamaño del h2 */
+    color: #333;
+    margin-bottom: 10px;
+  }
 
-.section-list {
-  flex: 3;
-  padding-left: 300px;
-}
+  .section-content p {
+    font-size: 1.125em;
+    /* Ajuste del tamaño del p */
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    /* Ajuste del interlineado */
+  }
 
-.section-content h2 {
-  font-size: 1.75em;
-  /* Ajuste del tamaño del h2 */
-  color: #333;
-  margin-bottom: 10px;
-}
+  .section-list ul {
+    list-style-type: none;
+    font-size: 1.125em;
+    /* Ajuste del tamaño del p */
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    /* Ajuste del interlineado */
+  }
 
-.section-content p {
-  font-size: 1.125em;
-  /* Ajuste del tamaño del p */
-  color: #666;
-  margin-bottom: 10px;
-  line-height: 1.5;
-  /* Ajuste del interlineado */
-}
+  .section-list ul li {
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+  }
 
-.section-list ul {
-  list-style-type: none;
-  font-size: 1.125em;
-  /* Ajuste del tamaño del p */
-  color: #666;
-  margin-bottom: 10px;
-  line-height: 1.5;
-  /* Ajuste del interlineado */
-}
-
-.section-list ul li {
-  font-size: 1em;
-  color: #333;
-  margin: 5px 0;
-}
-
-
-/* page2 */
+  /* page2 */
 
   #page3 {
     height: fit-content;
@@ -1239,8 +1216,8 @@ footer .footer-bottom h1 .last {
     cursor: pointer;
   }
 
-  .second .second-one .span>span::after,
-  .second .second-one .span1>span::after {
+  .second .second-one .span > span::after,
+  .second .second-one .span1 > span::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1253,8 +1230,8 @@ footer .footer-bottom h1 .last {
     transition: transform 0.35s ease-out;
   }
 
-  .second .second-one .span>span:hover::after,
-  .second .second-one .span1>span:hover::after {
+  .second .second-one .span > span:hover::after,
+  .second .second-one .span1 > span:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
   }
@@ -1273,8 +1250,8 @@ footer .footer-bottom h1 .last {
     cursor: pointer;
   }
 
-  .second .second-two .span>span::after,
-  .second .second-two .span1>span::after {
+  .second .second-two .span > span::after,
+  .second .second-two .span1 > span::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1287,8 +1264,8 @@ footer .footer-bottom h1 .last {
     transition: transform 0.35s ease-out;
   }
 
-  .second .second-two .span>span:hover::after,
-  .second .second-two .span1>span:hover::after {
+  .second .second-two .span > span:hover::after,
+  .second .second-two .span1 > span:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
   }
@@ -1324,11 +1301,9 @@ footer .footer-bottom h1 .last {
   }
 
   /* footer*/
-
 }
 
 @media screen and (min-width: 577px) and (max-width: 1024px) {
-
   /* Ajustes generales */
 
   /* Loader */
@@ -1384,7 +1359,7 @@ footer .footer-bottom h1 .last {
 
   .menu .menu-border {
     height: 0px;
-}
+  }
 
   /* Pagina 1 */
 
@@ -1418,8 +1393,8 @@ footer .footer-bottom h1 .last {
     flex-direction: column;
   }
 
-  .circle{
-    background-color: #FFF;
+  .circle {
+    background-color: #fff;
     box-shadow: 0 0 0;
     border-radius: 0;
     height: fit-content;
@@ -1445,9 +1420,7 @@ footer .footer-bottom h1 .last {
     justify-content: center;
     align-items: center;
     padding: 10px !important;
-
   }
-
 
   #page1-content button {
     font-size: 14px;
@@ -1667,8 +1640,8 @@ footer .footer-bottom h1 .last {
     cursor: pointer;
   }
 
-  .second .second-one .span>span::after,
-  .second .second-one .span1>span::after {
+  .second .second-one .span > span::after,
+  .second .second-one .span1 > span::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1681,8 +1654,8 @@ footer .footer-bottom h1 .last {
     transition: transform 0.35s ease-out;
   }
 
-  .second .second-one .span>span:hover::after,
-  .second .second-one .span1>span:hover::after {
+  .second .second-one .span > span:hover::after,
+  .second .second-one .span1 > span:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
   }
@@ -1701,8 +1674,8 @@ footer .footer-bottom h1 .last {
     cursor: pointer;
   }
 
-  .second .second-two .span>span::after,
-  .second .second-two .span1>span::after {
+  .second .second-two .span > span::after,
+  .second .second-two .span1 > span::after {
     content: "";
     position: absolute;
     height: 1px;
@@ -1715,8 +1688,8 @@ footer .footer-bottom h1 .last {
     transition: transform 0.35s ease-out;
   }
 
-  .second .second-two .span>span:hover::after,
-  .second .second-two .span1>span:hover::after {
+  .second .second-two .span > span:hover::after,
+  .second .second-two .span1 > span:hover::after {
     transform-origin: bottom left;
     transform: scaleX(1);
   }
@@ -1752,5 +1725,4 @@ footer .footer-bottom h1 .last {
   }
 
   /* footer*/
-
 }
