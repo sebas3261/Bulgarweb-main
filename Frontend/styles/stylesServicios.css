@@ -451,11 +451,12 @@ nav h4 {
 .section-content {
   flex: 2;
   margin: 0 10px;
+  max-width: 30%;
 }
 
 .section-list {
-  flex: 3;
-  padding-left: 300px;
+  display: flex;
+  align-items: center;
 }
 
 .section-content h2 {
@@ -817,11 +818,24 @@ footer .footer-bottom h1 .last {
   letter-spacing: 8px;
 }
 
+.img-sect{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10%;
+}
+
+.img-sect img{
+  width: 80px;
+}
+
 /* footer*/
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 838px) {
   /* Ajustes generales */
-
+  .img-sect{
+    display: none;
+  }
   /* Loader */
   .loader h2 span {
     font-size: 26px;
@@ -983,6 +997,7 @@ footer .footer-bottom h1 .last {
 
   .section-content {
     margin: 0;
+    max-width: 100%;
   }
 
   .section-list {
@@ -1303,9 +1318,8 @@ footer .footer-bottom h1 .last {
   /* footer*/
 }
 
-@media screen and (min-width: 577px) and (max-width: 1024px) {
+@media screen and (min-width: 838px) and (max-width: 1024px) {
   /* Ajustes generales */
-
   /* Loader */
   .loader h2 span {
     font-size: 26px;
