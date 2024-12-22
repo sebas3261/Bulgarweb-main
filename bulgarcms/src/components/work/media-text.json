@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_work_media_texts",
+  "info": {
+    "displayName": "media-text"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

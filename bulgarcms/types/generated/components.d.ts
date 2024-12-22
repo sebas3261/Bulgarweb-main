@@ -50,6 +50,17 @@ export interface ContactoSections extends Schema.Component {
   };
 }
 
+export interface WorkMediaText extends Schema.Component {
+  collectionName: 'components_work_media_texts';
+  info: {
+    displayName: 'media-text';
+  };
+  attributes: {
+    title: Attribute.String;
+    media: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -57,6 +68,7 @@ declare module '@strapi/types' {
       'nosotros.sections': NosotrosSections;
       'index.servicios-texts': IndexServiciosTexts;
       'contacto.sections': ContactoSections;
+      'work.media-text': WorkMediaText;
     }
   }
 }

@@ -932,6 +932,44 @@ export interface ApiServiciosPagServiciosPag extends Schema.SingleType {
   };
 }
 
+export interface ApiWorkPageWorkPage extends Schema.SingleType {
+  collectionName: 'work_pages';
+  info: {
+    singularName: 'work-page';
+    pluralName: 'work-pages';
+    displayName: 'workPage';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.DefaultTo<'Bulgar'>;
+    Text1: Attribute.Text;
+    Subtitle: Attribute.String;
+    SplitWord: Attribute.String;
+    Title1: Attribute.String;
+    Title2: Attribute.String;
+    Slider1: Attribute.String;
+    Slider2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::work-page.work-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -954,6 +992,7 @@ declare module '@strapi/types' {
       'api::indexpage.indexpage': ApiIndexpageIndexpage;
       'api::nosotros-pag.nosotros-pag': ApiNosotrosPagNosotrosPag;
       'api::servicios-pag.servicios-pag': ApiServiciosPagServiciosPag;
+      'api::work-page.work-page': ApiWorkPageWorkPage;
     }
   }
 }

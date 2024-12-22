@@ -15,10 +15,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: rh;
   -webkit-font-smoothing: antialiased; 
   font-weight: 400;
+  color: white;
 }
 
 html,
@@ -27,6 +27,25 @@ body {
   overscroll-behavior: none;
   width: 100%;
   height: 100%;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Menu */
+
+.menu{
+  background-color: red;
+  height: 100hv;
+}
+
+.vid{
+  max-width: 400px;
+  overflow: hidden;
 }
 
 .line__container {
@@ -93,6 +112,109 @@ section {
   transform: translateY(110%);
   transition: 0.5s;
 }
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;  /* Menú oculto por defecto */
+  background-color: #ff5f38;
+  overflow: hidden;
+  transition: height 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu.active {
+  height: 64vh; /* Menú expandido cuando tiene la clase 'active' */
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu-header img {
+  width: 50px;
+}
+
+.menu-header #toggle-menu {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;  /* Centra los elementos horizontalmente */
+}
+
+.links{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  margin-right: 300px;
+}
+
+.links h3 {
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-align: center; /* Centra los enlaces */
+  transition: color 0.3s ease;
+}
+
+.links a {
+  text-decoration: none;
+  color: black /* Color blanco para los enlaces */
+}
+
+.links a:hover {
+  color: black; /* Cambio de color en hover */
+}
+
+.menu-sec .vid video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.menu-sec{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.small-links {
+  display: flex;
+  justify-content:space-between;
+  width: 100%;
+  border-top-color: #000000;
+  border-top-width: 2px;
+}
+
+.small-links h3 {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.small-links h3:hover {
+  color: #ff5f38; /* Color de hover en los enlaces pequeños */
+}
+/* Menu */
 
 /* Hero */
 
@@ -463,6 +585,10 @@ section {
   .project {
     width: 50vw;
   }
+
+  .vid{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -473,7 +599,7 @@ section {
   .projects__sticky {
     height: 12.5%;
   }
-
+ 
   .project {
     width: 100vw;
   }

@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "work_pages",
+  "info": {
+    "singularName": "work-page",
+    "pluralName": "work-pages",
+    "displayName": "workPage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "Bulgar"
+    },
+    "Text1": {
+      "type": "text"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "SplitWord": {
+      "type": "string"
+    },
+    "Title1": {
+      "type": "string"
+    },
+    "Title2": {
+      "type": "string"
+    },
+    "Slider1": {
+      "type": "string"
+    },
+    "Slider2": {
+      "type": "string"
+    }
+  }
+}
