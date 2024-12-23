@@ -952,6 +952,7 @@ export interface ApiWorkPageWorkPage extends Schema.SingleType {
     Title2: Attribute.String;
     Slider1: Attribute.String;
     Slider2: Attribute.String;
+    proyecto: Attribute.Component<'work.proyect', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

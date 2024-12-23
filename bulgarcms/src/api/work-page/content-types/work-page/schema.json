@@ -36,6 +36,12 @@
     },
     "Slider2": {
       "type": "string"
+    },
+    "proyecto": {
+      "displayName": "proyect",
+      "type": "component",
+      "repeatable": true,
+      "component": "work.proyect"
     }
   }
 }
