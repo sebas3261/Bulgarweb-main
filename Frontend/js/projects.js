@@ -1,90 +1,111 @@
 // Projects
+let projects = []
 
-const projects = [
-    {
-        name: 'PROJECT ONE',
-        type: 'WEB DESIGN',
-        pos: 'start',
-        image: 'https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&q=80&w=2370&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-    {
-        name: 'PROJECT 2',
-        type: 'GRAPHIC DESIGN',
-        pos: 'mid',
-        image: 'https://images.unsplash.com/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2952&q=80' 
-    },
-    {
-        name: 'PROJECT 3',
-        type: 'TYPE DESIGN',
-        pos: 'end',
-        image: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'    },
-    {
-        name: 'PROJECT 4',
-        type: 'WEB DESIGN',
-        pos: 'mid',
-        image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2564&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-    {
-        name: 'PROJECT 5',
-        type: 'WEB DESIGN',
-        pos: 'end',
-        image: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-    {
-        name: 'PROJECT 6',
-        type: 'GRAPHIC DESIGN',
-        pos: 'mid',
-        image: 'https://images.unsplash.com/photo-1561998338-13ad7883b20f?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-    {
-        name: 'PROJECT 7',
-        type: 'WEB DESIGN',
-        pos: 'start',
-        image: 'https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-    {
-        name: 'PROJECT 8',
-        type: 'TYPE DESIGN',
-        pos: 'end',
-        image: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-
-]
-
-const createProjects = () => {
-    projects.forEach(project => {
-        let panel = document.createElement('div');
-        panel.classList.add('project', `${project.pos}`);
-
-        let imageContainer = document.createElement('div');
-        imageContainer.className = `image__container`;
-
-        let image = document.createElement('img');
-        image.classList.add('project__image');
-        image.src = project.image;
-
-        let projectDetails = document.createElement('div');
-        projectDetails.classList.add('project__details');
-
-        let projectTitle = document.createElement('p');
-        projectTitle.innerText = project.name;
-
-        let projectType = document.createElement('p');
-        projectType.innerText = project.type;
-
-        projectDetails.append(projectTitle, projectType)
-
-        imageContainer.appendChild(image);
-        panel.append(imageContainer, projectDetails);
-
-        document.querySelector('.projects__slider').appendChild(panel);
-    })
-
+const fetchData = async () => {
+    try {
+        const response = await fetch("http://localhost:1337/api/work-page?populate=*");
+        const data = await response.json();
+        
+        
+        projects = [
+            {
+                name: data.data.attributes.proyecto[0].name.toUpperCase(),
+                type: data.data.attributes.proyecto[0].type.toUpperCase(),
+                pos: 'start',
+                image: 'http://localhost:1337' + data.data.attributes.proyecto[0].content
+            },
+            {
+                name: 'PROJECT 2',
+                type: 'GRAPHIC DESIGN',
+                pos: 'mid',
+                image: 'https://images.unsplash.com/reserve/aOcWqRTfQ12uwr3wWevA_14401305508_804b300054_o.jpg?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2952&q=80' 
+            },
+            {
+                name: 'PROJECT 3',
+                type: 'TYPE DESIGN',
+                pos: 'end',
+                image: 'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'    },
+            {
+                name: 'PROJECT 4',
+                type: 'WEB DESIGN',
+                pos: 'mid',
+                image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2564&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+            },
+            {
+                name: 'PROJECT 5',
+                type: 'WEB DESIGN',
+                pos: 'end',
+                image: 'https://images.unsplash.com/photo-1604871000636-074fa5117945?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+            },
+            {
+                name: 'PROJECT 6',
+                type: 'GRAPHIC DESIGN',
+                pos: 'mid',
+                image: 'https://images.unsplash.com/photo-1561998338-13ad7883b20f?auto=format&fit=crop&q=80&w=2487&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+            },
+            {
+                name: 'PROJECT 7',
+                type: 'WEB DESIGN',
+                pos: 'start',
+                image: 'https://images.unsplash.com/photo-1454117096348-e4abbeba002c?auto=format&fit=crop&q=80&w=2602&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+            },
+            {
+                name: 'PROJECT 9',
+                type: 'TYPE DESIGN',
+                pos: 'end',
+                image: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?auto=format&fit=crop&q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
+            }
+        ]
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
 }
 
+const createProjects = () => {
+    // Asegúrate de que los proyectos se han cargado antes de intentar iterar sobre ellos.
+    if (projects.length > 0) {
+        projects.forEach(project => {
+            let panel = document.createElement('div');
+            panel.classList.add('project', `${project.pos}`);
 
-// Blog posts
+            let imageContainer = document.createElement('div');
+            imageContainer.className = `image__container`;
 
+            let image = document.createElement('img');
+            image.classList.add('project__image');
+            image.src = project.image;
+
+            let projectDetails = document.createElement('div');
+            projectDetails.classList.add('project__details');
+
+            let projectTitle = document.createElement('p');
+            projectTitle.innerText = project.name;
+
+            let projectType = document.createElement('p');
+            projectType.innerText = project.type;
+
+            projectDetails.append(projectTitle, projectType)
+
+            imageContainer.appendChild(image);
+            panel.append(imageContainer, projectDetails);
+
+            document.querySelector('.projects__slider').appendChild(panel);
+        });
+    } else {
+        console.log("No projects to display yet.");
+    }
+}
+
+// Ejecuta la función para cargar los proyectos
+const initializeProjects = async () => {
+    await fetchData();  // Espera a que los proyectos se carguen
+    createProjects();   // Después de que los proyectos se carguen, crea los elementos
+}
+
+// Llamar a la función que carga los datos y luego crea los proyectos
+initializeProjects();
+
+// Blog posts (esto está bien, no lo cambies)
 const blogPosts = [
     {
         title: 'BLOG POST ONE',
@@ -132,12 +153,9 @@ const createBlogposts = () => {
         postDiv.append(imageContainer, postDetails)
         blogPostSection.appendChild(postDiv);
 
-        document.getElementById('blog').appendChild(blogPostSection)
-
+        document.getElementById('blog').appendChild(blogPostSection);
     })
 }
-
-
 
 export {
     createProjects,

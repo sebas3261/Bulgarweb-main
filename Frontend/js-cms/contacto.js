@@ -1,3 +1,18 @@
+// Seleccionamos el botón de menú y el contenedor del menú
+const menuButton = document.getElementById('menuButton');
+const menu = document.querySelector('.menu');
+const toggleText = document.querySelector('#toggle-menu span');  // Para cambiar el texto de "Close"
+
+// Agregamos un evento de clic al botón de menú
+menuButton.addEventListener('click', () => {
+  menu.classList.toggle('open');  // Activa o desactiva el menú
+});
+
+toggleText.addEventListener('click', () => {
+  menu.classList.toggle('open');  // Activa o desactiva el menú
+});
+
+
 async function fetchAtt() {
     try {
         const response = await fetch('http://localhost:1337/api/contacto-pag?populate=*');

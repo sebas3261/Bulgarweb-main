@@ -15,10 +15,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
   font-family: rh;
   -webkit-font-smoothing: antialiased; 
   font-weight: 400;
-  color: white;
 }
 
 html,
@@ -29,24 +29,141 @@ body {
   height: 100%;
 }
 
-nav{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
 /* Menu */
 
-.menu{
-  background-color: red;
-  height: 100hv;
+nav{
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+nav a{
+  text-decoration: none;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* El menú ocupará todo el ancho */
+  height: 430px; /* El menú ocupará toda la altura de la pantalla */
+  background-color: #ff5f38;
+  padding: 48.8px;
+  transform: translateY(-100%); /* Ocultar el menú fuera de la vista (arriba) */
+  transition: transform 0.3s ease-in-out; /* Animación para el deslizamiento */
+  z-index: 1000; /* Asegura que el menú esté por encima del contenido */
+}
+
+/* Mostrar el menú cuando el toggle está activado */
+.menu.open {
+  transform: translateY(0); /* Mueve el menú hacia la vista (en la parte superior) */
+}
+
+/* Botón de menú */
+.menu-toggle-button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+/* Cuando el menú esté abierto */
+.menu.open .menu-toggle-button {
+  display: none; /* Ocultar el botón "Menu" cuando el menú está abierto */
+}
+
+
+.logoimg{
+  max-width: 16.95px;
+}
+
+.menu-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.menu-header span{
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .vid{
-  max-width: 400px;
+  width: 300px;
+  height: 250px;
   overflow: hidden;
+  border-radius: 20px;
 }
+
+.vid video{
+  height: 250px;
+}
+
+.menu-sec{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.links{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  line-height: 1;
+  justify-content: center;
+}
+
+.links h3 a{
+  color: black;
+  font-size: 50px;
+  text-decoration: none;
+  position: relative;
+}
+
+.small-links, .social{
+  display: flex;
+  flex-direction: row;
+}
+
+.small-links h4, .small-links h3{
+  color: black;
+}
+
+.small-links{
+  border-top-color: #000000;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.social{
+  gap:20px;
+}
+
+
+.links h3 a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; 
+  transition: width 0.3s ease; 
+}
+
+/* Al hacer hover sobre el enlace */
+.links h3 a:hover::after {
+  width: 100%;
+}
+
+/* Menu */
 
 .line__container {
   position: fixed;
@@ -112,109 +229,6 @@ section {
   transform: translateY(110%);
   transition: 0.5s;
 }
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 0;  /* Menú oculto por defecto */
-  background-color: #ff5f38;
-  overflow: hidden;
-  transition: height 0.3s ease;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu.active {
-  height: 64vh; /* Menú expandido cuando tiene la clase 'active' */
-}
-
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.menu-header img {
-  width: 50px;
-}
-
-.menu-header #toggle-menu {
-  cursor: pointer;
-  font-size: 1.5rem;
-}
-
-.menu-content {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 20px;
-  align-items: center;  /* Centra los elementos horizontalmente */
-}
-
-.links{
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  margin-right: 300px;
-}
-
-.links h3 {
-  font-size: 2.5rem;
-  cursor: pointer;
-  text-align: center; /* Centra los enlaces */
-  transition: color 0.3s ease;
-}
-
-.links a {
-  text-decoration: none;
-  color: black /* Color blanco para los enlaces */
-}
-
-.links a:hover {
-  color: black; /* Cambio de color en hover */
-}
-
-.menu-sec .vid video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.menu-sec{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-}
-
-.small-links {
-  display: flex;
-  justify-content:space-between;
-  width: 100%;
-  border-top-color: #000000;
-  border-top-width: 2px;
-}
-
-.small-links h3 {
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.social{
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.small-links h3:hover {
-  color: #ff5f38; /* Color de hover en los enlaces pequeños */
-}
-/* Menu */
 
 /* Hero */
 
@@ -586,9 +600,19 @@ section {
     width: 50vw;
   }
 
-  .vid{
-    display: none;
+  /* Menu */
+  .menu{
+    height: 100%;
   }
+
+  .menu-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  /* Menu */
 }
 
 @media only screen and (max-width: 600px) {
@@ -599,12 +623,20 @@ section {
   .projects__sticky {
     height: 12.5%;
   }
- 
+
   .project {
     width: 100vw;
   }
 
   .post {
     width: 80%;
+  }
+
+  .vid{
+    display: none;
+  }
+
+  .small-links h4{
+    display: none;
   }
 }

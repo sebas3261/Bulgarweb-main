@@ -75,254 +75,137 @@ body {
 /* cursor */
 
 /* menu */
+nav{
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+nav a{
+  text-decoration: none;
+}
 
 .menu {
-  height: 0vh;
-  position: absolute;
-}
-
-.menu.active {
-  position: absolute;
-  z-index: 6;
-  height: fit-content;
-  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* El menú ocupará todo el ancho */
+  height: 430px; /* El menú ocupará toda la altura de la pantalla */
   background-color: #ff5f38;
+  padding: 48.8px;
+  transform: translateY(-100%); /* Ocultar el menú fuera de la vista (arriba) */
+  transition: transform 0.3s ease-in-out; /* Animación para el deslizamiento */
+  z-index: 1000; /* Asegura que el menú esté por encima del contenido */
 }
 
-.menu-header {
-  height: 40px;
-  width: 100vw;
+/* Mostrar el menú cuando el toggle está activado */
+.menu.open {
+  transform: translateY(0); /* Mueve el menú hacia la vista (en la parte superior) */
+}
+
+/* Botón de menú */
+.menu-toggle-button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+}
+
+/* Cuando el menú esté abierto */
+.menu.open .menu-toggle-button {
+  display: none; /* Ocultar el botón "Menu" cuando el menú está abierto */
+}
+
+
+.logoimg{
+  max-width: 16.95px;
+}
+
+.menu-header{
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 0vw 3vw;
-  margin-top: 2vw;
 }
 
-.menu-header a {
-  color: #2d2b2b;
-  text-decoration: none;
-  font-weight: lighter;
-  cursor: pointer;
-  font-weight: lighter;
-  font-size: 1.5vw;
-  letter-spacing: -1px;
-}
-
-.menu-header #close {
-  /* position: relative; */
-  cursor: pointer;
-}
-
-.menu-header #close a {
-  cursor: pointer;
-}
-
-.menu-header img {
-  font-size: 1.7vw;
+.menu-header span{
+  color: black;
   font-weight: 500;
-  width: 5%;
-}
-
-.menu-header #close::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.35s ease-out;
   cursor: pointer;
 }
 
-.menu-header #close:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-  cursor: pointer;
-}
-
-#close {
-  cursor: pointer;
-  margin-top: 10px;
-  /* position: absolute; */
-  right: 5%;
-  top: 5%;
-}
-
-#close:hover {
-  text-decoration: underline;
-}
-
-.menu-sec {
+.vid{
+  width: 300px;
   height: 250px;
-  width: 100vw;
-  padding: 0vw 3vw;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.vid video{
+  height: 250px;
+}
+
+.menu-sec{
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  position: relative;
+  margin-bottom: 40px;
 }
 
-.menu-sec .vid {
-  height: 250px;
-  width: 300px;
-  border-radius: 8px;
-  position: relative;
-}
-
-.menu-sec .vid video {
-  width: 300px;
-  height: 220px;
-  border-radius: 8px;
-}
-
-.menu-sec .vid .play {
+.links{
   display: flex;
-  position: absolute;
-  left: 0;
-  bottom: 5px;
-  gap: 5px;
-  font-weight: lighter;
-}
-
-.menu-sec .vid .play #play {
-  position: relative;
-}
-
-.menu-sec .vid .play #play::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.35s ease-out;
-}
-
-.menu-sec .vid .play #play:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.menu-sec .vid .play i {
-  color: #fff;
-}
-
-.menu-sec .vid .play h4 {
-  font-weight: lighter;
-  font-size: 1.1vw;
-  margin-left: 170px;
-}
-
-.menu-sec .links {
-  position: relative;
-}
-
-.menu-sec .links h3 {
-  font-size: 3.1vw;
-  font-weight: lighter;
-  margin-right: 15vw;
-  cursor: pointer;
+  flex-direction: column;
+  width: 30%;
   line-height: 1;
-  position: relative;
+  justify-content: center;
 }
 
-.menu-sec .links a {
+.links h3 a{
+  color: black;
+  font-size: 50px;
   text-decoration: none;
+  position: relative;
+  font-weight: 400;
+}
+
+.small-links, .social{
+  display: flex;
+  flex-direction: row;
+}
+
+.small-links h4, .small-links h3{
   color: black;
 }
 
-.menu-sec .links h3::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 50%;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(0);
-  background-color: #000;
-  transform-origin: bottom right;
-  transition: transform 0.35s ease-out;
-}
-
-.menu-sec .links h3:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.menu-sec .links button {
-  background-color: transparent;
-  border: 1px solid #000;
-  padding: 1vw 1.8vw;
-  border-radius: 5px;
-  font-size: 1.2vw;
-  margin: 1.5vw 0vw 0vw 1.5vw;
-  cursor: pointer;
-}
-
-.menu-sec .links button:hover {
-  background-color: #000;
-  color: #ff5f38;
-  transition: background-color 0.3s ease;
-}
-
-.menu .menu-border {
-  height: 1px;
-  width: 0vw;
-  margin: 4vw 3vw 0vw 3vw;
-  background-color: #2d2b2b;
-}
-
-.menu .small-links {
+.small-links{
+  border-top-color: #000000;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding: 10px;
   display: flex;
-  align-items: top;
   justify-content: space-between;
 }
-
-.menu .small-links h4 {
-  font-weight: lighter;
-  padding: 1vw 3vw;
+.social{
+  gap:20px;
 }
 
-.menu .small-links h3 {
-  font-weight: lighter;
-  font-size: 1.2vw;
-  cursor: pointer;
-  position: relative;
-}
 
-.menu .small-links .social {
-  display: flex;
-  justify-content: space-around;
-  /* Opcional: ajusta el espacio entre los elementos */
-  align-items: center;
-  /* Opcional: alinea verticalmente los elementos */
-  position: relative;
-  right: 5%;
-}
-
-.menu .small-links h3::after {
-  content: "";
+.links h3 a::after {
+  content: '';
   position: absolute;
-  height: 1px;
-  width: 80%;
-  bottom: 25%;
-  left: 10%;
-  transform: scaleX(0);
-  background-color: #000;
-  transform-origin: bottom right;
-  transition: transform 0.35s ease-out;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; 
+  transition: width 0.3s ease; 
 }
 
-.menu .small-links h3:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+/* Al hacer hover sobre el enlace */
+.links h3 a:hover::after {
+  width: 100%;
 }
 
 /* menu */
@@ -662,7 +545,7 @@ footer{
 
 
 
-@media screen and (min-width: 577px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
   /* Ajustes generales */
   body {
@@ -683,53 +566,15 @@ footer{
     height: 0px;
 }
   /* Menu */
-
-  .menu-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .menu{
+    height: 100vh;
   }
 
-  .menu {
+  .menu-content{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .menu-sec .links a {
-    font-size: 60px;
-  }
-
-  .menu .small-links .title-small-links {
-    font-size: 25px;
-  }
-
-  .small-links {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    margin-top: -30%;
-  }
-
-  .social {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu .small-links .social h3 {
-    font-size: 30px;
-    text-align: left;
-    margin: 0;
-    padding: 5px 0;
-  }
-  .slidepage3{
-    overflow-x: auto;
-    scrollbar-width: none;
-    justify-content: center;
-  }
-
-  .slidepage3::-webkit-scrollbar {
-    display: none; /* Chrome, Safari y Edge */
+    height: 100%;
+    justify-content: space-around;
   }
 
   /* Pagina 1 */
@@ -963,52 +808,13 @@ footer{
 
   /* Menu */
 
-  .menu-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .menu-sec .vid {
+  .vid{
     display: none;
   }
 
-  .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .menu-sec .links a {
-    font-size: 60px;
-  }
-
-  .menu .menu-border {
+  .small-links h4{
     display: none;
   }
-
-  .menu .small-links .title-small-links {
-    display: none;
-  }
-
-  .small-links {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-
-  .social {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .menu .small-links .social h3 {
-    font-size: 30px;
-    text-align: left;
-    margin: 0;
-    padding: 5px 0;
-  }
-
 
   /* Pagina 1 */
 

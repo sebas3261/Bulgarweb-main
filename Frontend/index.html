@@ -21,17 +21,17 @@
                 <span>Today.™</span>
             </h2>
         </div>
-        <div id="page1"> <!-- body -->
-            <div class="menu">
-                <div class="menu-header">
-                    <a href="index.html"><img src="img/preview.webp" alt=""></a>
-                    <h2 id="close"><span>Close</span></h2>
-                </div>
 
+        <div class="menu">
+            <div class="menu-header">
+                <a href="index.html"><img src="img/preview.webp" alt="Logo" class="logoimg" /></a>
+                <h2 id="toggle-menu"><span>Close</span></h2>
+            </div>
+
+            <div class="menu-content">
                 <div class="menu-sec">
                     <div class="vid">
-                        <video muted autoplay loop src="video/video1.mp4"></video>
-
+                        <video class="no-animate" muted autoplay loop src="video/video1.mp4"></video>
                     </div>
                     <div class="links">
                         <h3><a href="index.html">Inicio</a></h3>
@@ -41,16 +41,18 @@
                         <h3><a href="Contacto.html">Contacto</a></h3>
                     </div>
                 </div>
-                <div class="menu-border"></div>
                 <div class="small-links">
                     <h4 class="title-small-links">Tomorrow's Brands, Today.™</h4>
                     <div class="social">
-                        <h3>X <i class="ri-arrow-right-up-line"></i></h3>
-                        <h3>Instagram <i class="ri-arrow-right-up-line"></i></h3>
-                        <h3>LinkedIn <i class="ri-arrow-right-up-line"></i></h3>
+                        <h3>X</h3>
+                        <h3>Instagram</h3>
+                        <h3>LinkedIn</h3>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="page1"> <!-- body -->
             <div id="cursor">
                 <h5>Reel</h5>
             </div>
@@ -58,9 +60,7 @@
             <div id="page1-content"> <!-- container -->
                 <nav>
                     <h2><a href="index.html">Bulgar.work</a></h2>
-                    <div class="button-menu">
-                        <h2 id="menu"><a href="#">Menu</a></h2>
-                    </div>
+                    <div id="menuButton" class="menu-toggle-button">Menu</div>
                 </nav>
                 <h1 id="headerTitle">
                     <!-- CONTENIDO MANEJADO POR CMS -->
@@ -78,7 +78,7 @@
             <div class="elem">
                 <h1 id="descriptionText1"> <!-- CONTENIDO MANEJADO POR CMS --> </h1>
             </div>
-            
+
         </div>
         <div id="page3">
             <div id="page3-top">
@@ -86,21 +86,21 @@
                 <!-- CONTENIDO MANEJADO POR CMS -->
             </div>
             <div class="slidepage3">
-            <div id="page3-elements">
-                <div class="box">
-                    <img src="img/cubierta.webp" alt="">
-                    <video autoplay loop muted src="" id="videoEl1"><!-- CONTENIDO MANEJADO POR CMS --></video>
-                </div>
-                <div class="box">
-                    <img src="img/cubierta.webp" alt="">
-                    <video autoplay loop muted src="" id="videoEl2"><!-- CONTENIDO MANEJADO POR CMS --></video>
-                </div>
-                <div class="box">
-                    <img src="img/cubierta.webp" alt="">
-                    <video autoplay loop muted src="" id="videoEl3"><!-- CONTENIDO MANEJADO POR CMS --></video>
+                <div id="page3-elements">
+                    <div class="box">
+                        <img src="img/cubierta.webp" alt="">
+                        <video autoplay loop muted src="" id="videoEl1"><!-- CONTENIDO MANEJADO POR CMS --></video>
+                    </div>
+                    <div class="box">
+                        <img src="img/cubierta.webp" alt="">
+                        <video autoplay loop muted src="" id="videoEl2"><!-- CONTENIDO MANEJADO POR CMS --></video>
+                    </div>
+                    <div class="box">
+                        <img src="img/cubierta.webp" alt="">
+                        <video autoplay loop muted src="" id="videoEl3"><!-- CONTENIDO MANEJADO POR CMS --></video>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
         <div id="page3-2">
             <div id="page3-2-top">
@@ -177,7 +177,7 @@
                             <span>Instagram<i class="ri-arrow-right-up-line"></i></span>
                             <span>LinkedIn<i class="ri-arrow-right-up-line"></i></span>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -186,7 +186,6 @@
                     <span>info@bulgar.work</span>
                 </div>
                 <h1 id="footerTitle" class="animend">
-                    <!-- CONTENIDO MANEJADO POR CMS -->
                 </h1>
             </div>
         </footer>

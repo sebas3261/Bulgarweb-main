@@ -1,26 +1,16 @@
-// Asigna el evento de clic al botón para alternar el menú
-document.getElementById("menuButton").addEventListener("click", () => {
-  const menu = document.querySelector(".menu"); // Cambiar a querySelector para usar clase
-  menu.classList.toggle("active"); // Cambiar "hidden" por "active"
+// Seleccionamos el botón de menú y el contenedor del menú
+const menuButton = document.getElementById('menuButton');
+const menu = document.querySelector('.menu');
+const toggleText = document.querySelector('#toggle-menu span');  // Para cambiar el texto de "Close"
+
+// Agregamos un evento de clic al botón de menú
+menuButton.addEventListener('click', () => {
+  menu.classList.toggle('open');  // Activa o desactiva el menú
 });
 
-document.getElementById("toggle-menu").addEventListener("click", () => {
-  const menu = document.querySelector(".menu"); // Cambiar a querySelector 
-  menu.classList.toggle("active"); // Cambiar "hidden" por "active"
+toggleText.addEventListener('click', () => {
+  menu.classList.toggle('open');  // Activa o desactiva el menú
 });
-
-
-// Cerrar el menú si se hace clic fuera de él o fuera del botón
-document.addEventListener("click", (event) => {
-  const menu = document.querySelector(".menu");
-  const menuButton = document.getElementById("menuButton");
-
-  // Si se hace clic fuera del menú o del botón, lo cierra
-  if (!menu.contains(event.target) && event.target !== menuButton) {
-    menu.classList.remove("active");
-  }
-});
-
 
 async function fetchData() {
   try {
