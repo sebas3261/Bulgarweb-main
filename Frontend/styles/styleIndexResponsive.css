@@ -764,6 +764,11 @@ footer{
     align-items: flex-end;
   }
 
+  .slidepage3{
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
   .swiper-slide img {
     display: block;
     object-fit: cover;

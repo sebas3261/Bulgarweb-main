@@ -975,6 +975,10 @@ footer{
 
   .section-list {
     padding-left: 0;
+    border: solid;
+    border-width: thick;
+    padding: 15px;
+    border-radius: 0px 40px 0px 40px;
   }
 
   .section-content h2 {
